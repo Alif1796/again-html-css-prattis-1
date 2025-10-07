@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.main>div{
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+    transition: all 0.5s;
+}
+
+.main>div:nth-child(1):hover{
+    /* transform: translate(20px , 20px); */
+    transform: translateX(20px) translateY(20px);
+}
+
+.main>div:nth-child(2):hover{
+    /* transform: scale(80%); */
+    transform: scale(0.8);
+}
+
+.main>div:nth-child(3):hover{
+    /* transform: skew(45deg); */
+    /* transform: skewX(45deg);
+    transform: skewY(45deg); */
+    transform: skewY(45deg) skewY(45deg);
+}
+.main>div:nth-child(4):hover{
+    /* transform: rotate(45deg);
+    transform: rotateX(45deg);
+    transform: rotateY(45deg);
+    transform: rotateZ(45deg); */
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+}
+.main>div:nth-child(5):hover{
+   background: url("../images/p1.avif");
+   background-size: cover;
+   background-repeat: no-repeat;
+       transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+
+}
+
+.pain{
+    width: 100%;
+    position: relative;
+
+}
+
+.pain > div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+    top: 0;
+    left: 20px;
+
+    animation-name: sohoj;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+     background: url("../images/p2.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 72px;
+}
+
+.pain > div:hover{
+    background: url("../images/p1.avif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 15;
+}
+
+@keyframes sohoj {
+    0% {
+        top: 0;
+        left: 20px;
+    }
+
+    50% {
+        left: calc(100% - 220px);
+        
+    }
+
+    100% {
+        top: 0;
+        left: 20px;
+    }
+}
